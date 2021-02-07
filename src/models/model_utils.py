@@ -17,6 +17,5 @@ def save_model_info(info_file, graph_file, model):
     '''
     with open(info_file, 'w') as f:
         model.summary(print_fn=lambda x: f.write(x + '¥n'))
-    # you should install pydot and graphviz through pip
-    # you should install gtaphviz to your local OS (e.g. brew install graphviz)
+    # should install pydot and graphviz
     plot_model(model, to_file=graph_file, show_shapes=True)

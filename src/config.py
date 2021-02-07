@@ -2,19 +2,15 @@ import os
 import sys
 from pathlib import Path
 
-# TODO consider the config.py file path
-# TODO change relative path to absolute path
 project_dir = Path(__file__).resolve().parents[1]
 
 TRN_SRC_DIR = os.path.join(project_dir, 'data/processed/stationery/training')
 
 TRN_DST_DIR = os.path.join(project_dir, 'models')
-# TODO place them into reasonable path.
 TRN_EST_FILE = os.path.join(TRN_DST_DIR, 'estimator.h5')
 TRN_CLS_FILE = os.path.join(TRN_DST_DIR, 'class.pkl')
 TRN_INFO_FILE = os.path.join(TRN_DST_DIR, 'model_info.txt')
 TRN_GRAPH_FILE = os.path.join(TRN_DST_DIR, 'model_graph.txt')
-# please do not place them to reports/figures.
 TRN_HIST_FILE = os.path.join(TRN_DST_DIR, 'history.pdf')
 TRN_FT_HIST_FILE = os.path.join(TRN_DST_DIR, 'ft_history.pdf')
 
@@ -25,13 +21,11 @@ TRN_FT_LR = 1e-5
 TRN_MIN_LR = 1e-7
 TRN_MIN_FT_LR = 1e-8
 TRN_BATCH_SIZE = 32
-# TRN_REUSE_CNT = 10
-# TRN_EPOCHS = 200
-
+TRN_REUSE_CNT = 10
+TRN_EPOCHS = 200
 # for easily check
-TRN_REUSE_CNT = 1
-TRN_EPOCHS = 1
-
+# TRN_REUSE_CNT = 1
+# TRN_EPOCHS = 1
 TRN_VALID_RATE = 0.2
 TRN_ES_PATIENCE = 30
 TRN_LR_PATIENCE = 10
