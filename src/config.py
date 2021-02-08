@@ -9,6 +9,8 @@ TRN_SRC_DIR = os.path.join(project_dir, 'data/processed/stationery/training')
 TRN_DST_DIR = os.path.join(project_dir, 'models')
 TRN_EST_FILE = os.path.join(TRN_DST_DIR, 'estimator.h5')
 TRN_CLS_FILE = os.path.join(TRN_DST_DIR, 'class.pkl')
+
+TRN_RESULT_DIR = os.path.join(project_dir, 'reports/train_results')
 TRN_INFO_FILE = os.path.join(TRN_DST_DIR, 'model_info.txt')
 TRN_GRAPH_FILE = os.path.join(TRN_DST_DIR, 'model_graph.txt')
 TRN_HIST_FILE = os.path.join(TRN_DST_DIR, 'history.pdf')
@@ -34,6 +36,6 @@ TRN_FT_START = 15
 
 # TODO decide estimator destination path
 EST_SRC_DIR = os.path.join(project_dir, 'data/processed/stationery/test')
-EST_DST_DIR = ''
-EST_DRS_FILE = ''
-EST_SRS_FILE = ''
+EST_DST_DIR = os.path.join(project_dir, 'reports/test_results')
+EST_DRS_FILE = os.path.join(EST_DST_DIR, 'detailed_result.txt')
+EST_SRS_FILE = os.path.join(EST_DST_DIR, 'summary_result.txt')
