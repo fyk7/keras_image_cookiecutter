@@ -1,10 +1,42 @@
-keras_image_cookiecutter
-==============================
+# keras_image_cookiecutter
 
 image classification by keras with cookiecutter templete
 
-Project Organization
-------------
+# features
+
+- Install requirements
+
+```sh
+$ make requirements
+```
+
+- Download datasets
+
+```sh
+$ make data
+```
+
+- Make features
+
+```sh
+# In this project, there is no need for enter below command,
+# because data augumentations will be implemented during training the model.
+$ python path/to/src/features/build_features.py
+```
+
+- Train
+
+```sh
+$ python path/to/src/models/train_model.py
+```
+
+- Predict
+
+```sh
+$ python path/to/src/models/predict_model.py
+```
+
+## Project Organization
 
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
@@ -51,7 +83,6 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
---------
+---
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
