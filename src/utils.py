@@ -101,7 +101,8 @@ def plot(history, filename):
         plt.grid()
         plt.legend(ncol=2, bbox_to_anchor=(0, 1), loc='lower left')
 
-    plt.figure(fig_size=(10, 10))
+    plt.figure(figsize=(10, 10))
+    plt.figure()
     xdata = range(1, 1 + len(history['loss']))
     add_subplot(2, 1, 1, xdata, history['loss'],
                 history['val_loss'], (0, 5), 'loss')

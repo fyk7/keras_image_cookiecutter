@@ -32,7 +32,7 @@ class Estimator:
         for subdir in os.listdir(self.src_dir):
             for f in os.listdir(os.path.join(self.src_dir, subdir)):
                 filename = os.path.join(self.src_dir, subdir, f)
-                img = utils.load_img(filename, self.input_size)
+                img = utils.load_target_image(filename, self.input_size)
                 pred_class = np.argmax(estimator.predict(img))
                 pred_label = cls_info[pred_class]
                 pred_labels.append(pred_label)
@@ -42,7 +42,7 @@ class Estimator:
 
                 output.append(f'{filename} -> {pred_label}')
 
-        report = classificaiton_report(true_label, pred_labels)
+        report = classification_report(true_labels, pred_labels)
         labels = list(cls_info.values())
         cnfmtx = confusion_matrix(true_labels, pred_labels, labels)
         cm = pd.DataFrame(cnfmtx, index=labels, columns=labels)
